@@ -1,0 +1,32 @@
+.dayWidget {
+    padding: 10px;
+    width: 80%;
+    background: #95888b78;
+    border-radius: 5px;
+    margin: 10px;
+    max-width: 400px;
+    color: white;
+}
+.date {
+    font-size: 20px;
+}
+.curr-temp {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 54px;
+}
+.weather-img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 130px;
+    position: relative;
+    top: -20px;
+}
+.gFQEix, .fSRhDY {
+    background: none !important;
+}
+.min-temp, .max-temp{
+    font-size: 15px;
+    display: inline-block;
+    margin: 0px 15px;
+}
