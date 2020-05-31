@@ -2,24 +2,35 @@ import React from "react";
 import "./dayWidget.css";
 import { Sunny, Cloudy, Rain, Snow } from 'weather-styled-icon';
 
+const getWeatherImage = (weather) => {
+    switch(weather){
+        case "Sunny": return <Sunny/>;
+        case "Cloudy": return <Cloudy/>;
+        case "Rain": return <Rain/>;
+        case "Snow": return <Snow/>;
+        default: return <Sunny/>;
+    }
+}
+
 const DayWidget = props => {
+    let weatherImage = getWeatherImage(props.tempData.weatherType);
     return (
         <div className="dayWidget">
             <div className="date">
-                Fri 29-June-2020
+               {props.date}
             </div>
             <div className="curr-temp">
-                23&deg;<sup>c</sup>
+                {props.tempData.avgTemp}&deg;<sup>c</sup>
             </div>
             <div className="weather-img">
-                <Rain />
+                {weatherImage}
             </div>
             <div className="temp-range">
                 <div  className="min-temp">
-                    Min: 19&deg;<sup>c</sup>
+                    Min: {props.tempData.minTemp}&deg;<sup>c</sup>
                 </div> 
                 <div  className="max-temp">
-                    Max:30&deg;<sup>c</sup>
+                    Max: {props.tempData.maxTemp}&deg;<sup>c</sup>
                 </div>
             </div>
         </div>
