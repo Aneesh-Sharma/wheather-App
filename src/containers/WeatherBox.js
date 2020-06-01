@@ -29,7 +29,7 @@ class WeatherBox extends React.Component {
             this.setState({errMessage: "Please Enter City Name"});
             return;
         }
-        let url = `http://api.openweathermap.org/data/2.5/forecast?q=${this.state.cityName}&appid=${ApiKey}`;
+        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.cityName}&appid=${ApiKey}`;
         this.setState({loading: true, errMessage: ""});
         axios.get(url)
         .then(res=>{
