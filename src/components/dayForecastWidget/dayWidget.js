@@ -4,7 +4,7 @@ import { Sunny, Cloudy, Rain, Snow } from 'weather-styled-icon';
 
 const getWeatherImage = (weather) => {
     switch(weather){
-        case "Sunny": return <Sunny/>;
+        case "Clear": return <Sunny/>;
         case "Cloudy": return <Cloudy/>;
         case "Rain": return <Rain/>;
         case "Snow": return <Snow/>;
@@ -15,7 +15,7 @@ const getWeatherImage = (weather) => {
 const DayWidget = props => {
     let weatherImage = getWeatherImage(props.tempData.weatherType);
     return (
-        <div className="dayWidget">
+        <div className="dayWidget" onClick={props.onClick}>
             <div className="date">
                {props.date}
             </div>
@@ -24,6 +24,9 @@ const DayWidget = props => {
             </div>
             <div className="weather-img">
                 {weatherImage}
+            </div>
+            <div className="weather-name">
+                {props.tempData.weatherType}
             </div>
             <div className="temp-range">
                 <div  className="min-temp">

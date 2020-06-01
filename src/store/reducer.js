@@ -1,5 +1,7 @@
 const initialState = {
-    forecastData: null
+    cityName: "",
+    forecastDates: null,
+    forecastDaysData: null,
 }
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -31,7 +33,7 @@ const getWeatherFromId = (id) => {
     if(id > 800){
         return "Cloudy";
     }else if(id == 800){
-        return "Sunny";
+        return "Clear";
     }else if(id >= 701){
         return "Cloudy";
     }else if(id >= 600){
@@ -39,7 +41,7 @@ const getWeatherFromId = (id) => {
     }else if(id >= 200){
         return "Rain";
     }
-    return "Sunny";
+    return "Clear";
 }
 
 const getForecastDaysData = (forecastHoursData) => {
@@ -49,7 +51,7 @@ const getForecastDaysData = (forecastHoursData) => {
         let minTemp = 1000;
         let avgTemp = 0;
         let weatherTypeCounts = {
-            Sunny: 0,
+            Clear: 0,
             Cloudy: 0,
             Snow: 0,
             Rain: 0
@@ -93,10 +95,13 @@ const reducer = (state = initialState, action) => {
         forecastDaysData = getForecastDaysData(forecastHoursData);
 
         return {
+            cityName: action.cityName,
             forecastDates,
             forecastHoursData,
             forecastDaysData
         }
+    }else if(action.type === 'RESET_DATA'){
+        return initialState;
     }
     return state;
 };

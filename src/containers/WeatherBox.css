@@ -51,6 +51,16 @@ input:focus, button:focus{
     align-items: center;
 }
 
+.error-message {
+    display: inline-block;
+    color: #dd3734;
+    font-size: 17px;
+    margin-top: 20px;
+    background-color: #ffe9ea78;
+    padding: 6px 9px;
+    border-radius: 3px;
+}
+
 .loader {
     position: absolute;
     left: 0;

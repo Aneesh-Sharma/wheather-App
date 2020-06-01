@@ -1,0 +1,28 @@
+.forecast-detail-Page{
+    height: 100%;
+}
+.city-name {
+    color: #95888b;
+    font-size: 22px;
+    background: #ffffff7a;
+    display: inline-block;
+    padding: 0px 10px;
+    font-weight: 600;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.hour-widget-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: calc(100% - 125px);
+    overflow: scroll;
+    align-items: center;
+}
+
+.heading img{
+    width: 35px;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+}
