@@ -1,0 +1,50 @@
+.hourWidget {
+    padding: 10px;
+    width: 80%;
+    background: #95888b78;
+    border-radius: 5px;
+    margin: 10px;
+    max-width: 400px;
+    color: white;
+}
+.hr-temp{
+    font-size: 26px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.hr-image{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: right;
+}
+.hr-weather-name {
+    font-size: 14px;
+}
+.hr-time-range{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: left;
+}
+.hr-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.hr-temp-range{
+    margin-bottom: 15px;
+}
+.hr-min-temp, .hr-max-temp{
+    display: inline-block;
+    margin: 0px 15px;
+}
+.hr-detail{
+    font-size: 14px;
+}
+.no-display {
+    display: none;
+}
+.view-more{
+    display: inline-block;
+    color: bisque;
+}
